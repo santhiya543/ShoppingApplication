@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Shopping Application</title>
+<script src = "script.js"></script>
+<script src="https://kit.fontawesome.com/16739cf339.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header class="headerContainer">
+                <div class="headerHolder">
+                    <a class="audiophileLogo" href="index.html"><img height="35%" src=""/></a>
+                    <ul class="headerLinks">
+                        <a class="headerLink" href="index.html"><i class="icon fa-solid fa-magnifying-glass" style="color: #ffffff;font-size: 1.3vw;"></i></a>
+                        <a class="headerLink" href="index.html">Home</a>
+                        <a class="headerLink" href="speakers.html">Category</a>
+                        <a class="headerLink" href="Login.html"><i class="fa-regular fa-heart" style="color: #ffffff;font-size: 1.5vw;"></i></a>
+                        <a class="headerLink" href="Login.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;font-size: 1.5vw;"></i></a>
+                        <a class="headerLink profileIcon" href="Login.html"><i class="fa-regular fa-circle-user" style="color: #ffffff;font-size: 1.5vw;"></i></a>
+                       <a id="loginButton" class="headerLink" style= "display:none" href="Login.html">LOGIN</a>
+                       <a id="logoutButton" onclik="logOut()" style= "display:none" class="headerLink" href="index.html">LOGOUT</a>
+                    </ul>
+                </div>
+      </header>
+	<section id="signUpHolder">
+        <form id="signUpForm">
+            <p id="signUpHead">Sign up</p>
+            <p class="signupInputHolder">
+                <label for="emailID">E-mail <span class="star">*</span></label>
+                <input id="email" name="emailID" oninput="mailcheck(this)" type="email" placeholder="Ex. kirikalan.magicshow@gmail.com"/>
+                <span class="red hide">Please enter the required data</span>
+            </p>
+            <p class="signupInputHolder">
+                <label for="newUser">Username <span class="star">*</span></label>
+                <input id="username" name="newUser" type="text" placeholder="Ex. KirikalanShow11"/>
+                <span class="red hide">Please enter the required data</span>
+                <span id="existingAcc" class="red hide">Username already exists</span>
+            </p>
+            <p class="signupInputHolder">
+                <label for="newPassword">Password <span class="star">*</span></label>
+                <input id="password" oninput="newPasswordCheck()" name="newPassword" type="password" placeholder="Enter the password"/>
+                <span class="red hide">Please enter the required data</span>
+                <i id="eyeOpen1" onclick="hideAndSeek(1)" class="fa-solid eyeOpen fa-eye"></i>
+                <i id="eyeClose1" onclick="hideAndSeek(2)" class="fa-solid hide eyeClose fa-eye-slash"></i>
+            </p>
+            <p class="signupInputHolder">
+                <label for="confirmPassword">Confirm Password <span class="star">*</span></label>
+                <input id="confirmPassword" oninput="confirmPasswordCheck()" name="confirmPassword" type="password" placeholder="Re-enter the password"/>
+                <span class="red hide">Please enter the required data</span>
+            </p>
+            <input id="signupButton" onclick="sendSignupRequest()" type="button" value="Create Account"/>
+        </form>
+    </section>
+</body>
+</html>

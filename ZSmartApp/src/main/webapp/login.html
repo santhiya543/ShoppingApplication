@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Shopping Application</title>
+<script src = "script.js"></script>
+<script src="https://kit.fontawesome.com/16739cf339.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header class="headerContainer">
+                <div class="headerHolder">
+                    <a class="audiophileLogo" href="index.html"><img height="35%" src=""/></a>
+                    <ul class="headerLinks">
+                        <a class="headerLink" href="index.html"><i class="icon fa-solid fa-magnifying-glass" style="color: #ffffff;font-size: 1.3vw;"></i></a>
+                        <a class="headerLink" href="index.html">Home</a>
+                        <a class="headerLink" href="index.html">Category</a>
+                        <!-- <a class="headerLink" href="Login.html">Profile</a> -->
+                        <a class="headerLink" href="index.html"><i class="fa-regular fa-heart" style="color: #ffffff;font-size: 1.5vw;"></i></a>
+                        <a class="headerLink" href="index.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;font-size: 1.5vw;"></i></a>
+                        <a class="headerLink profileIcon" href="index.html"><i class="fa-regular fa-circle-user" style="color: #ffffff;font-size: 1.5vw;"></i></a>
+                        <a id="loginButton" class="headerLink" style= "display:none" href="login.html">LOGIN</a>
+                        <a id="logoutButton" onclik="logOut()" style= "display:none" class="headerLink" href="index.html">LOGOUT</a>
+                    </ul>
+                </div>
+      </header>
+	 <section id="loginHolder">
+        <form id="loginForm">
+            <p id="loginHead">SIGN IN</p>
+            <label for="userName">Username <span class="star">*</span></label>
+            <input onkeydown="clearBorder('userName', this.value)" id="userName" name="userName" type="text" placeholder="Ex. RajeshDragneel"/>
+            <span class="red hide">username not found</span>
+            <label for="password">Password <span class="star">*</span></label>
+            <input onkeydown="clearBorder('password', this.value)" id="password" name="password" minlength="8" type="password" placeholder="Atleast 8 characters"/>
+            <span class="red hide">incorrect password</span>
+            <i id="eyeOpen2" onclick="hideAndSeek(2)" class="fa-solid eyeOpen2 fa-eye"></i>
+            <i id="eyeClose2" onclick="hideAndSeek(2)" class="fa-solid hide eyeClose2 fa-eye-slash"></i>
+            <p id="noAcc">Don't have an account? <a id="newAcc" href="signUp.html">Create account</a></p>
+            <input type="button" onclick="signIn()" value="Sign in" id="submitButton">
+        </form>
+    </section>
+</body>
+<script>
+window.onload=load();
+</script>
+</html>

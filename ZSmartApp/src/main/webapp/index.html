@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+		<title>Shopping Application</title>
+		<script src = "script.js"></script>
+		<script src="https://kit.fontawesome.com/16739cf339.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		 <div id="wholeContainer">
+	            <header class="headerContainer">
+	                <div class="headerHolder">
+	                    <a class="audiophileLogo" href="index.html"><img height="125px" src="image/logo.png"/></a>
+	                    <input type="text" class="search"></input>
+	                    <ul class="headerLinks">
+	                        <a class="headerLink" href="index.html"><i class="icon fa-solid fa-magnifying-glass" style="color: #ffffff;font-size: 1.3vw;"></i></a>
+	                        <a class="headerLink" href="index.html">Home</a>
+	                        <a class="headerLink" href="speakers.html">Category</a>
+	                        <a class="headerLink" id="wish" href="wishList.html"><i class="fa-regular fa-heart" style="color: #ffffff;font-size: 1.5vw;"></i></a>
+	                        <a class="headerLink" id="cart" href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;font-size: 1.5vw;"></i></a>
+	                        <a class="headerLink profileIcon" id="profile" href="profile.html"><i class="fa-regular fa-circle-user" style="color: #ffffff;font-size: 1.5vw;"></i></a>
+	                       <a class="loginButton headerLink" href="login.html">LOGIN</a>
+                           <a class="logoutButton" onclick="logout()" class="headerLink">LOGOUT</a>
+	                    </ul>
+	                </div>
+	            </header>
+	            <section id="section1">
+	            	<div id="banner"></div>
+	            </section>
+	            <section id="productContainer">
+	            
+	            	<!-- <div id="productContainer"></div> -->
+	            </section>
+		</div>
+	</body>
+	<script>	
+	window.onload=getAllProducts();
+	window.onload=load();
+	</script>
+</html>
